@@ -1,0 +1,9 @@
+import requests
+b=['http://www.17k.com/book/2758326.html','http://www.17k.com/book/2758326.html']
+header={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36'}
+with open('C:\\Users\\ฬ๏มหมห\\Desktop\\zuoye.b.html','w',encoding='utf8') as t:
+    for i in range(2):
+        url=b[i]
+        response=requests.get(url,headers=header)
+        t.write(response.text)
+print(i)    
