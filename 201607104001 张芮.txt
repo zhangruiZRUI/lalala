@@ -1,0 +1,25 @@
+sudo mysql -u root -p
+show databases;
+create database zhangrui_mysql charset=utf8;
+show databases;
+use zhangrui_mysql;
+select database();
+create table gw(
+    -> id int(10) auto_increment primary key,
+    -> name varchar(20) not null,
+    -> password varchar(20) not null,
+    -> favor varchar(30),
+    -> discount varchar(30),
+    -> wish varchar(30));
+desc gw;
+insert into gw(id,name,password,favor,discount,wish)
+    -> values(1,"cat","201607104001","skirt","7","clothes");
+insert into gw(name,password,favor,discount,wish)
+    -> values("dog","29343465","nike","3","aj"),("pig","34354656","zippo","9","panada");
+ select * from gw;
+update gw set wish="apple" where wish="clothes";
+select * from gw;
+delete from gw where name="pig";
+
+
+
