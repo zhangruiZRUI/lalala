@@ -1,0 +1,49 @@
+ create table shouc(id
+    ->  int (10) auto_increment primary key,
+    -> collect varchar(20));
+desc shouc;
++---------+-------------+------+-----+---------+----------------+
+| Field   | Type        | Null | Key | Default | Extra          |
++---------+-------------+------+-----+---------+----------------+
+| id      | int(10)     | NO   | PRI | NULL    | auto_increment |
+| collect | varchar(20) | YES  |     | NULL    |                |
++---------+-------------+------+-----+---------+----------------+
+ insert into shouc(id,collect)
+    -> values(1,"panda");
+ insert into shouc(collect)
+    -> values("cat"),("pig"),("dog"),("giraffe"),("dolphin");
+select * from shouc;
++----+---------+
+| id | collect |
++----+---------+
+|  1 | panda   |
+|  2 | cat     |
+|  3 | pig     |
+|  4 | dog     |
+|  5 | giraffe |
+|  6 | dolphin |
++----+---------+
+ alter table shouc add zhuangtai int default 0;
+ select * from shouc;
++----+---------+-----------+
+| id | collect | zhuangtai |
++----+---------+-----------+
+|  1 | panda   |         0 |
+|  2 | cat     |         0 |
+|  3 | pig     |         0 |
+|  4 | dog     |         0 |
+|  5 | giraffe |         0 |
+|  6 | dolphin |         0 |
++----+---------+-----------+
+update shouc set zhuangtai=1 where collect="pig";
+select * from shouc;
++----+---------+-----------+
+| id | collect | zhuangtai |
++----+---------+-----------+
+|  1 | panda   |         0 |
+|  2 | cat     |         0 |
+|  3 | pig     |         1 |
+|  4 | dog     |         0 |
+|  5 | giraffe |         0 |
+|  6 | dolphin |         0 |
++----+---------+-----------+
