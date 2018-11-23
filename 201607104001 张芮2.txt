@@ -1,0 +1,136 @@
+mysql -u root -p
+show databases;
+--------------------+
+| Database           |
++--------------------+
+| hello_mysql        |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+use hello_mysql;
+create table work(
+    -> id int auto_increment primary key,
+    -> gongzi int(10) not null);
+ desc work;
+------+---------+------+-----+---------+----------------+
+| Field  | Type    | Null | Key | Default | Extra          |
++--------+---------+------+-----+---------+----------------+
+| id     | int(11) | NO   | PRI | NULL    | auto_increment |
+| gongzi | int(10) | NO   |     | NULL    |                |
++--------+---------+------+-----+---------+----------------+
+insert into work(id,gongzi)
+    -> values(1,"3500");
+ insert into work(gongzi)
+    -> values("3000"),("4000"),("4200"),("4300"),("4500"),("4800"),("5000"),
+("5200"),("5400"),("5500"),("5600"),("6000"),("6400"),("6500");
+select * from work;
+id | gongzi |
++----+--------+
+|  1 |   3500 |
+|  2 |   3000 |
+|  3 |   4000 |
+|  4 |   4200 |
+|  5 |   4300 |
+|  6 |   4500 |
+|  7 |   4800 |
+|  8 |   5000 |
+|  9 |   5200 |
+| 10 |   5400 |
+| 11 |   5500 |
+| 12 |   5600 |
+| 13 |   6000 |
+| 14 |   6400 |
+| 15 |   6500 |
++----+--------+
+ create table work2
+    -> (id int auto_increment primary key,
+    -> gongzi2 int(10) not null);
+desc work2;
+ Field   | Type    | Null | Key | Default | Extra          |
++---------+---------+------+-----+---------+----------------+
+| id      | int(11) | NO   | PRI | NULL    | auto_increment |
+| gongzi2 | int(10) | NO   |     | NULL    |                |
++---------+---------+------+-----+---------+----------------+
+insert into work2(id,gongzi2)
+    -> values(1,"5000");
+insert into work2(gongzi2)
+    -> values("5000"),("5200"),("6000"),("6300"),("6400"),("6500"),("6600"),("7000"),
+("7500"),("7600"),("8000"),("5500"),("5800"),("6900");
+  select * from work2;
+id | gongzi2 |
++----+---------+
+|  1 |    5000 |
+|  2 |    5000 |
+|  3 |    5200 |
+|  4 |    6000 |
+|  5 |    6300 |
+|  6 |    6400 |
+|  7 |    6500 |
+|  8 |    6600 |
+|  9 |    7000 |
+| 10 |    7500 |
+| 11 |    7600 |
+| 12 |    8000 |
+| 13 |    5500 |
+| 14 |    5800 |
+| 15 |    6900 |
++----+---------+
+ select max(gongzi) from work;
+ +-------------+
+| max(gongzi) |
++-------------+
+|        6500 |
++-------------+
+select min(gongzi) from work;
++-------------+
+| min(gongzi) |
++-------------+
+|        3000 |
++-------------+
+select max(gongzi2) from work2;
++--------------+
+| max(gongzi2) |
++--------------+
+|         8000 |
++--------------+
+select min(gongzi2) from work2;
++--------------+
+| min(gongzi2) |
++--------------+
+|         5000 |
++--------------+
+ select * from work order by gongzi desc limit 0,5;
++----+--------+
+| id | gongzi |
++----+--------+
+| 15 |   6500 |
+| 14 |   6400 |
+| 13 |   6000 |
+| 12 |   5600 |
+| 11 |   5500 |
++----+--------+
+select * from work order by gongzi desc limit 5,5;
++----+--------+
+| id | gongzi |
++----+--------+
+| 10 |   5400 |
+|  9 |   5200 |
+|  8 |   5000 |
+|  7 |   4800 |
+|  6 |   4500 |
++----+--------+
+ select * from work order by gongzi desc limit 10,5;
+----+--------+
+| id | gongzi |
++----+--------+
+|  5 |   4300 |
+|  4 |   4200 |
+|  3 |   4000 |
+|  1 |   3500 |
+|  2 |   3000 |
++----+--------+
+select * from work2 order by gongzi2 desc limit 0,5;
+select * from work2 order by gongzi2 desc limit 5,5;
+select * from work2 order by gongzi2 desc limit 10,5;
