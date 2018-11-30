@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网页制作</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="wang.css"
+</head>
+<body style="background-image: url('34.jpg');background-size: cover">
+<div>
+<div class="wang" style="overflow: auto">
+    <div style="border:1px #C5C1AA;width:1200px;height: 30px;background: #f2f2f2">
+    &nbsp;&nbsp;<i class="fa fa-facebook-official"style="font-size: 15px;color:black;vertical-align: middle;float-left:0px"></i>
+    <b style="font-size: 20px;color: black">/</b>
+    <i class="fa fa-twitter"style="font-size: 15px;color:black;vertical-align: middle;float-left:0px"></i>
+    <b style="font-size: 20px;color: black">/</b>
+    <i class="fa fa-wordpress"style="font-size: 15px;color:black;vertical-align: middle;float-left:0px"></i>
+    <b style="font-size: 20px;color: black">/</b>
+    <i class="fa fa-linkedin"style="font-size: 15px;color:black;vertical-align: middle;float-left:0px"></i>
+    <b style="font-size: 20px;color: black">/</b>
+    <i class="fa fa-instagram"style="font-size: 15px;color:black;vertical-align: middle;float-left:0px"></i>
+    <i class="fa fa-search"style="font-size: 20px;color:black;vertical-align: middle;float:right"></i>
+     <input type="button" onclick=""value="About" style="border: none;background-color: #f2f2f2;font-size: 20px;float: right"/>
+    <input type="button" onclick=""value="Contact Us" style="border: none;background-color: #f2f2f2;font-size: 20px;float: right"/>
+        <input type="button" onclick=""value="FAQ" style="border: none;background-color: #f2f2f2;font-size: 20px;float: right"/></div>
+    <div class="kuang1"><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" onclick="" value="isleMag" style="border: none;background-color:
+         #ffffff;font-size: 50px;vertical-align:middle;font-style: oblique;font-family: roman">
+        <input type="button" onclick="" value="728*90" style="border: none;background-color: darkcyan;font-size: 60px;float:right"/>
+        <input type="button" onclick="" value="themeisle" style="border: none;background-color:black;font-size: 60px;color:white;float: right"/>
+    </div>
+    <div class="kuang2">
+        <div style="float: left;width: 85px;height: 55px;background-color:white;border-top:3px solid salmon;border-bottom: solid white;border-left: 1px
+        solid white;border-right:1px solid white;text-align:center;vertical-align: center"><p><i class="fa fa-home"></i></p></div>
+        <div style="float: left;width: 85px;height: 55px;background-color:white;border-top:3px solid chocolate;border-bottom: solid white;border-left: 1px
+        solid darkgrey;border-right:1px solid white;text-align: center"><p>FEATURES</p></div>
+        <div style="float: left;width: 85px;height: 55px;background-color: white;border-top:3px solid darkgrey;border-bottom: solid white;border-left: 1px
+        solid darkgrey;border-right:1px solid white;text-align: center"><p>TECHNOLOGY</p></div>
+        <div style="float: left;width: 85px;height: 55px;background-color:white;border-top:3px solid lightblue;border-bottom: solid white;border-left: 1px
+        solid darkgrey;border-right:1px solid white;text-align: center"><p>BUSINESS</p></div>
+        <div style="float: left;width: 85px;height: 55px;background-color:white;border-top:3px solid greenyellow;border-bottom: solid white;border-left: 1px
+        solid darkgrey;border-right:1px solid white;text-align: center"><p>TRAVEL</p></div>
+        <div style="float: left;width: 85px;height: 55px;background-color:white;border-top:3px solid yellow;border-bottom: solid white;border-left: 1px
+        solid darkgrey;border-right:1px solid white;text-align: center"><p>BEAUTY</p></div>
+        <div style="float: left;width: 85px;height: 55px;background-color:white;border-top:3px solid chartreuse;border-bottom: solid white;border-left: 1px
+        solid darkgrey;border-right:1px solid white;text-align: center"><p>REVIEWS</p></div>
+    </div>
+    <div class="kuang3"">
+        <input type="button" onclick="" value="Category" style="border: none;background-color:#ffffff;font-size:55px;vertical-align: middle;font-family:roman;font-style:oblique;float: left">
+    </div>
+    <div class="kuang4">
+    <br>
+    <div data-options="region:'center'"><img src="捕获1.PNG"></div>
+    <br>
+    <div data-options="region:'center'"><img src="捕获2.PNG"></div>
+    <div data-options="region:'center'"><img src="捕获3.PNG"></div>
+    <div data-options="region:'center'"><img src="捕获4.PNG"></div>
+    <div data-options="region:'center'"><img src="捕获7.PNG"></div>
+    <div data-options="region:'center'"><img src="捕获6.PNG"></div>
+    <div data-options="region:'center'"><img src="捕获a.PNG"></div>
+    <div data-options="region:'center'"><img src="捕获b.PNG"></div>
+    <div data-options="region:'center'"><img src="捕获r.PNG"></div>
+    <div data-options="region:'center'"><img src="捕获d.PNG"></div>
+    </div>
+    <div class="kuang5">
+        <br>
+        <br>
+        <div data-options="region:'center'"><img src="捕获18.PNG"></div>
+        <div data-options="region:'center'"><img src="捕获13.PNG"></div>
+        <div data-options="region:'center'"><img src="捕获15.PNG"></div>
+        <br>
+        <div data-options="region:'center'"><img src="捕获16.PNG"></div>
+        <br>
+        <div data-options="region:'center'"><img src="捕获17.PNG"></div>
+    </div>
+</div>
+</body>
+</html>
