@@ -1,0 +1,175 @@
+第一次作业
+第一题
+def getPentagonalNumber(n):
+    c = int (n * (3* n-1)/2)
+    if n%10 !=0:
+        print(c,end=' ')
+    else:
+         print(c)
+for i in range(1,101):
+    getPentagonalNumber(i)
+
+第二题
+def sumDigits(n):
+    str_=str(n)
+    int_=0
+    for i in str_:
+        int_+=int(i)
+        print(int_)
+sumDigits(746)    
+
+第三题
+def displayStotedNumbers(num1,num2,num3):
+    res=[num1,num2,num3]
+    res.sort()
+    print(res)
+displayStotedNumbers(4,2,3)
+
+第四题
+def future_value(present_value,annual_rate,  periods_per_year,  years):
+    
+    for i in range(1,years+1):
+        rate_per_period = annual_rate / periods_per_year
+        periods = periods_per_year * i
+        print('%d   %.2f'% (i,present_value*((1+rate_per_period)**periods))) 
+present_value=int(input('本金是：'))
+annual_rate=float(input('年利率是：'))
+periods_per_year=int(input('每年的计息周期数是：'))
+years=int(input('存款年限：'))
+future_value(present_value,annual_rate,  periods_per_year,  years)  
+
+第五题
+def printchars(ch1,ch2,n):
+    ch1=input("ch1：")
+    ch2=input("ch2：")
+    n=int(input("每行打印的个数："))
+    count=0
+    for i in range(ord(ch1),ord(ch2)+1):
+        print(chr(i),end=" ")
+        count += 1
+        if count % n == 0:
+            print()
+printchars(ch1,ch2,n)
+
+第六题
+def number():
+    c=305
+    for year in range(2010,2021,1): 
+        i=year
+        if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+            print('%d年有%d天'%(i,c+1)) 
+        else:
+            print ('%d年有%d天'%(i,c))  
+number()
+
+第七题
+import math
+def distance(x1,y1,x2,y2):
+    a=x2-x1
+    b=y2-y1
+    c=math.sqrt((a**2)+(b**2))
+    return c
+x1,y1,x2,y2=map(int,input('请输入坐标:').split())
+distance(x1,y1,x2,y2)
+
+第八题
+import math
+def prime():
+    num=[]
+    i=2
+    for i in range(2,32):
+        j=2
+        for j in range(2,i):
+            if(i%j==0):
+                break
+        else:
+            num.append(i)
+    return num
+def misen():
+    print('p        2^p-1')
+    a=prime()
+    for p in range(1,32):
+        for i in range(11):
+            if (2**p)-1==a[i]:
+                print("%d         %d" %(p,a[i]))
+misen()
+
+第九题
+import time
+localtime = time.asctime(time.localtime(time.time()))
+print("本地时间为 :", localtime)
+
+第十题
+import random
+def shaizi():
+      a=random.choice([1,2,3,4,5,6])
+      b=random.choice([1,2,3,4,5,6])
+      if a+b==2 or  a+b==3 or a+b==12:
+            print('%d + %d = %d' %(a,b,a+b))
+            print('你输了')
+      elif a+b==7 or a+b==11:
+            print('%d + %d = %d' %(a,b,a+b))
+            print('你赢了')
+      else:
+            print('%d + %d = %d' %(a,b,a+b))
+            c=random.choice([1,2,3,4,5,6])
+            d=random.choice([1,2,3,4,5,6])
+            if c+d==7:
+                  print('%d + %d = %d' %(c,d,c+d))
+                  print('你输了')
+            elif c+d==a+b:
+                  print('%d + %d = %d' %(c,d,c+d))
+                  print('你赢了')
+shaizi()
+
+第十一题 王者荣耀
+class wangzhe(object):
+    def __init__(self,a):
+        self.a=a
+    def moshi(self):
+        if self.a==0:
+            print("人机")
+        else:
+            print("排位")      
+    def dianji(self):
+        res=input("输入")
+        print(res)
+    def xuanze(self):
+        print("请输入选择的英雄","典韦","赵云","鲁班")
+        self.a=input(">>")
+        print(res)          
+    def shuxing(self):
+        if self.a=="典韦":
+            print("英雄人物：典韦","战斗力：5800","防御值：6000")
+        elif self.a=="赵云":
+            print("英雄人物：赵云","战斗力：7800","防御值：4000")
+        elif self.a=="鲁班":
+            print("英雄人物：鲁班","战斗力：18000","防御值：2200")
+    def suiji(self):
+        import numpy as np
+        res=np.random.choice(["典韦","赵云","鲁班"])
+        print(res) 
+    def duizhan(self):
+        print("是否进入游戏","是","否")
+        self.a=input(">>")
+        print(self.a)
+        if self.a=="是":
+            print("游戏开始")
+        elif self.a=="否":
+            print("游戏结束")
+    def queding(self):
+        print("正在加载")
+yx=wangzhe(0)
+yx.moshi()
+yx.dianji()
+yx.xuanze()                  
+yx.shuxing()                  
+yx.suiji()
+yx.duizhan()
+yx.queding()
+
+
+
+
+
+
