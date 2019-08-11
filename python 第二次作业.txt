@@ -1,0 +1,293 @@
+第一题
+import math
+class Rectangle(object):
+    def __init__(self,width,height):
+        self.width=width
+        self.height=height
+        print('宽是：%.2f,高是：%.2f'% (width,height))
+    def getArea(self):
+        return self.width*self.height
+    def getPerimeter(self):
+        
+        return 2*(self.width+self.height)
+if __name__ == "__main__":
+    width=float(input('请输入宽：'))
+    height=float(input('请输入高：'))
+    r=Rectangle(width,height)
+    print('面积是：%.4f'% r.getArea())
+    print('周长是：%.4f'% r.getPerimeter())
+
+第二题
+class Account(object):
+    def __init__(self,id,bala,ann):
+        self.__id=id
+        self.__bala=float(bala)
+        self.__ann=float(ann)
+    def getMonthlyInterestRate(self):
+        self.f=float(self.__ann/1200)
+        print('月利率是%.4f：'% self.f)
+    def getMonthlyInterest(self):
+        s=float(self.f*self.__bala)
+        print('月利息是%.4f：'% s)      
+    def withdraw(self,quzou):
+        self.quzou=quzou
+        a=float(self.__bala*self.__ann/1200)-quzou
+        print(a)
+    def deposit(self,cunqian):
+        self.cunqian=cunqian
+        b=float(elf.__bala*self.__ann/1200)-cunqian
+        print(b)        
+if __name__ == "__main__":
+    id=int(input('请输入您的id：'))
+    bala=float(input('请输入本金：'))
+    ann=float(input('请输入年利率：'))
+    a=Account(id,bala,ann)
+    print('id是%d：'% a._Account__id)
+    print('金额是%d'% a._Account__bala)
+    a.getMonthlyInterestRate()
+    a.getMonthlyInterest()
+
+第三题
+class Fan(object):
+    def __init__(self,speed=1,on=False,r=5,color='blue'):
+        self.SLOW=1
+        self.MEDIUM=2
+        self.FAST=3
+        self.__speed=int(speed)
+        self.__on=bool(on)
+        self.__r=float(r)
+        self.__color=str(color)       
+    def prints(self):
+        if self.__speed==1:
+            print('SLOW')
+        elif self.__speed==2:
+            print('MEDIUM')
+        elif self.__speed==3:
+            print('FAST')
+        if self.__on=='on':
+            print('打开')
+        else:
+            print('关闭')       
+        print(self.__r)
+        print(self.__color)
+if __name__ == "__main__":
+    speed=int(input('选择速度：'))
+    on=bool(input('on or off'))
+    r=float(input('半径是：'))
+    color=str(input('颜色是：'))
+    fan=Fan(speed,on,r,color)
+    fan.prints()
+
+第四题
+import math
+
+class RegularPolygon(object):
+    def __init__(self,n=3,side=1,x=0,y=0):
+        self.__n=int(n)
+        self.__side=float(side)
+        self.__x=float(x)
+        self.__y=float(y)
+    def getPerimetetr(self):
+        print('周长是:%.4f'% (self.__n*self.__side )) 
+    def getArea(self):
+        self.s=self.__n*(self.__side**2)/4*math.tan(math.pi/self.__n)
+        print('面积%.4f'% self.s)
+if __name__ == "__main__":
+    n=int(input('请输入边数：'))
+    side=float(input('请输入边长：'))
+    x=float(input('请输入x轴坐标：'))
+    y=float(input('请输入y轴坐标：'))
+    r=RegularPolygon(n,side,x,y)
+    r.getPerimetetr()
+    r.getArea()
+
+第五题
+class LinearEquation(object): 
+    def __init__(self,a,b,c,d,e,f):
+        self.__a=a
+        self.__b=b
+        self.__c=c
+        self.__d=d
+        self.__e=e
+        self.__f=f           
+    def set_a(self,a):
+        self.__a=a
+    def get_a(self):
+        return self.__a
+    def set_b(self,b):
+        self.__b=b
+    def get_b(self):
+        return self.___b
+    def set_c(self,c):
+        self.__c=c
+    def get_c(self):
+        return self.__c
+    def set_d(self,d):
+        self.__d=d
+    def get_d(self):
+        return self.__d
+    def set_e(self,e):
+        self.__e=e
+    def get_e(self):
+        return self.__e
+    def set_f(self,f):
+        self.__f=f
+    def get_f(self):
+        return self.__f
+    def isSolvable(self):
+        if (self.__a*self.__d)-(self.__c*self.__b)!=0:
+            return True
+        else:
+            return print('此方程无解')
+    def getX(self):
+        s=(self.__a*self.__d)-(self.__b*self.__c)
+        x=(self.__e*self.__d)-(self.__b*self.__f)/s
+        print('X的值为：%.2f'% x)
+    def getY(self):
+        s=(self.__a*self.__d)-(self.__b*self.__c)
+        y=(self.__a*self.__f)-(self.__e*self.__c)/s
+        print('Y的值为：%.2f'% y)
+if __name__=="__main__":
+    a=int(input('a的值是：'))
+    b=int(input('b的值是：'))
+    c=int(input('c的值是：'))
+    d=int(input('d的值是：'))
+    e=int(input('e的值是：'))
+    f=int(input('f的值是：'))
+    l=LinearEquation(a,b,c,d,e,f)
+    l.isSolvable()
+    l.getX()
+    l.getY()
+
+第六题
+class zuobao:
+    def shur(self):
+        import math      
+        x1,y1,x2,y2=map(float,input().split())
+        x3,y3,x4,y4=map(float,input().split())
+        u1=(x4-x3)*(y1-y3)-(x1-x3)*(y4-y3)
+        v1=(x4-x3)*(y2-y3)-(x2-x3)*(y4-y3)
+        u=math.fabs(u1)
+        v=math.fabs(v1)
+
+        x5=(x1*v+x2*u)/(u+v)
+        y5=(y1*v+y2*u)/(u+v)
+        print(x5,y5) 
+re=zuobao()
+re.shur()
+
+第七题
+class LinearEquation(object):   
+    def __init__(self,a,b,c,d,e,f):
+        self.__a=a
+        self.__b=b
+        self.__c=c
+        self.__d=d
+        self.__e=e
+        self.__f=f           
+    def set_a(self,a):
+        self.__a=a
+    def get_a(self):
+        return self.__a
+    def set_b(self,b):
+        self.__b=b
+    def get_b(self):
+        return self.___b
+    def set_c(self,c):
+        self.__c=c
+    def get_c(self):
+        return self.__c
+    def set_d(self,d):
+        self.__d=d
+    def get_d(self):
+        return self.__d
+    def set_e(self,e):
+        self.__e=e
+    def get_e(self):
+        return self.__e
+    def set_f(self,f):
+        self.__f=f
+    def get_f(self):
+        return self.__f
+    def isSolvable(self):
+        if (self.__a*self.__d)-(self.__c*self.__b)!=0:
+            return True
+        else:
+            return print('此方程无解')
+    def getX(self):
+        s=(self.__a*self.__d)-(self.__b*self.__c)
+        x=(self.__e*self.__d)-(self.__b*self.__f)/s
+        print('X的值为：%.2f'% x)
+    def getY(self):
+        s=(self.__a*self.__d)-(self.__b*self.__c)
+        y=(self.__a*self.__f)-(self.__e*self.__c)/s
+        print('Y的值为：%.2f'% y)
+if __name__=="__main__":
+    a=int(input('a的值是：'))
+    b=int(input('b的值是：'))
+    c=int(input('c的值是：'))
+    d=int(input('d的值是：'))
+    e=int(input('e的值是：'))
+    f=int(input('f的值是：'))
+    l=LinearEquation(a,b,c,d,e,f)
+    l.isSolvable()
+    l.getX()
+    l.getY()
+
+第八题：网易邮箱
+class zhuce(object):
+    def __init__(self,a):
+        self.a=a
+    def dianji(self):
+        if self.a==0:
+            print("网易邮箱")
+        else:
+            print("其他页面")
+    def kaishi(self):
+        print("请选择用户类型","用户登录","用户注册")
+        self.a=input(">>")
+        print(self.a)     
+    def zhu(self):
+        res=input("请输入邮箱地址，默认@163.com邮箱")
+        print(res)
+    def mima(self):
+        for _ in range(4):
+            password_1 = input("请输入密码:>>")
+            password_2 = input("请再次确认密码:>>")
+            if password_1==password_2:
+                print("密码确认成功")7
+                break
+            else:
+                print("密码不一致请再次确认")
+        else:
+            print("非法注册，注册失败")
+    def tixing(self):
+        print("是否继续进行短信验证","是","否")
+        self.a=input(">>")
+        print(self.a)
+        if self.a=="是":
+            print("继续注册邮箱")
+        elif self.a=="否":
+            print("退出邮箱注册")
+    def yanzheng1(self):
+        import random
+        self.a=random.randrange(1000,9999)
+        for i in range(1,5):
+            if i<5:
+                print("验证成功")
+            else:
+                print("exit 0 退出验证")
+        print(self.a)
+    def shuru(self):
+        self.a=input("请输入随机四位验证码")
+        print(self.a)
+    def queding(self):
+        print("正在加载")
+        
+ym=zhuce(0)
+ym.dianji()
+ym.kaishi()
+ym.zhu()
+ym.mima()
+ym.tixing()
+ym.yanzheng1()
